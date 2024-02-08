@@ -16,9 +16,15 @@ p {
 }
 
 
-.nav-items {
+.nav-items  {
     @apply font-poppins font-medium text-23 uppercase text-darkGreen
 }
+
+li {
+    @apply hover:underline cursor-pointer
+}
+
+
 
 
 .section-heading {

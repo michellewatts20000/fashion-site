@@ -17,8 +17,16 @@ const Designer: React.FC<DesignerProps> = ({
   height,
 }) => {
   return (
-    <div className="max-w-[430px]">
-      <Image src={image} width={width} height={height} alt={"breakout"} />
+    <div className="max-w-[430px] cursor-pointer">
+      <div className="overflow-hidden">
+        <Image
+          src={image}
+          width={width}
+          height={height}
+          alt={"breakout"}
+          className="hover:scale-125"
+        />
+      </div>
       <div className="text-center ">
         <h1 className="text-darkGrey text-30 font-poppins font-medium mt-6 mb-4">
           {heading}

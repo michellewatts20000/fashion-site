@@ -19,16 +19,18 @@ const BestGrid: React.FC<BestGridProps> = ({
   height,
 }) => {
   return (
-    <div className="mb-10">
-      <Image
-        src={image}
-        width={width}
-        height={height}
-        alt={image}
-        className="mt-2"
-        priority
-        style={{ width: width, height: height }}
-      />
+    <div className="mb-10 cursor-pointer">
+      <div className="overflow-hidden">
+        <Image
+          src={image}
+          width={width}
+          height={height}
+          alt={image}
+          className="hover:scale-125"
+          priority
+          style={{ width: width, height: height }}
+        />
+      </div>
       <div className="text-center mt-[40px]">
         <p className="text-darkGrey font-semibold leading-normal">
           {productTitle}
