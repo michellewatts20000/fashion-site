@@ -16,7 +16,7 @@ bun dev
 
 ## Performance on Google Lighthouse
 
-![Google Lighthouse Performance](https://ibb.co/QbDynjN)
+![Google Lighthouse Performance](https://ibb.co/QbDynjN "Google Lighthouse Performance")
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
