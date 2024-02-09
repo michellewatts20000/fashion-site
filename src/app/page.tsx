@@ -139,8 +139,8 @@ export default function Home() {
         <div className="bg-limeGreen w-full md:h-[596px] overflow-hidden relative">
           <Image
             src={"/breakout.png"}
-            width={482}
-            height={596}
+            width={522}
+            height={558}
             alt={"breakout"}
             className="md:absolute bottom-0 left-20"
           />
