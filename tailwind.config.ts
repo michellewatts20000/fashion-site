@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontSize: {
 				clampHeading: "clamp(48px, 6vw, 86px)",
-				clampHeading2: "clamp(30px, 5vw, 64px)",
+				clampHeading2: "clamp(40px, 5vw, 64px)",
 				'16': ['16px', '25px'],
         '19': ['19px', '36px'],
 				'30': ['30px', '40px'],

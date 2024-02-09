@@ -1,11 +1,13 @@
 "use client";
-
+import { useLayoutEffect } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
 import BestGrid from "./components/BestGrid";
 import Button from "./components/Button";
 import SectionHeading from "./components/SectionHeading";
 import Designer from "./components/Designer";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import localFont from "next/font/local";
 const myFont = localFont({
   src: "/ui/Elephant-Regular.woff2",
@@ -16,8 +18,17 @@ import allProducts from "@/app/data/product.js";
 const { products, products2, products3 } = allProducts;
 
 export default function Home() {
+  gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
+  useLayoutEffect(() => {
+    ScrollSmoother.create({
+      smooth: 1,
+      effects: true,
+      speed: 0.8,
+    });
+  }, []);
   return (
-    <main className="max-w-[1920px] mx-auto">
+    <main className="max-w-[1920px] mx-auto" id="smooth-content">
       <section className="bg-limeGreen w-full hero relative">
         <nav className="md:top-[54px] md:absolute w-full md:p-0 p-[54px]">
           <div className="flex w-full items-center justify-between md:px-[175px]">
@@ -66,7 +77,7 @@ export default function Home() {
               dropShadow={true}
             />
           </div>
-          <div className="md:w-1/2  my-20 mt-40">
+          <div className="md:w-1/2  my-20 sm:mt-40">
             <Image
               src={"/hero.png"}
               width={570}
@@ -124,7 +135,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="max-w-[1377px] mx-auto py-20">
+      <section className="max-w-[1377px] mx-auto md:py-20">
         <div className="bg-limeGreen w-full md:h-[596px] overflow-hidden relative">
           <Image
             src={"/breakout.png"}
@@ -133,7 +144,7 @@ export default function Home() {
             alt={"breakout"}
             className="md:absolute bottom-0 left-20"
           />
-          <div className="flex items-center justify-end h-full p-20 md:p-0">
+          <div className="flex items-center justify-end h-full md:p-20 p-10">
             <div className="md:w-1/2">
               <div className="mb-10">
                 <h1 className="text-46 text-darkGreen font-roboto font-semibold mb-4">
@@ -145,19 +156,19 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="bg-white w-[100px] h-[100px] flex items-center justify-center">
+                <div className="bg-white md:w-[100px] md:h-[100px] w-[80px] h-[80px] flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-darkGreen leading-tight text-32">06</p>
                     <p className="text-darkGreen text-16 font-light">Days</p>
                   </div>
                 </div>
-                <div className="bg-white w-[100px] h-[100px] flex items-center justify-center">
+                <div className="bg-white md:w-[100px] md:h-[100px] w-[80px] h-[80px] flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-darkGreen leading-tight text-32">18</p>
                     <p className="text-darkGreen text-16 font-light">Hours</p>
                   </div>
                 </div>
-                <div className="bg-white w-[100px] h-[100px] flex items-center justify-center">
+                <div className="bg-white md:w-[100px] md:h-[100px] w-[80px] h-[80px] flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-darkGreen leading-tight text-32">48</p>
                     <p className="text-darkGreen text-16 font-light">Minutes</p>
@@ -174,7 +185,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1377px] mx-auto pb-10 px-10 md:px-0">
+      <section className="max-w-[1377px] mx-auto px-10 md:px-0 pb-[15rem]">
         <SectionHeading
           title="Designer Clothes For You"
           description="Immerse yourself in the world of luxury fashion with our meticulously crafted designer clothes!"

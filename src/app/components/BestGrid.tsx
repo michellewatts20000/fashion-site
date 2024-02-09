@@ -26,7 +26,7 @@ const BestGrid: React.FC<BestGridProps> = ({
           width={width}
           height={height}
           alt={image}
-          className="hover:scale-125"
+          className="hover:scale-125 ease-in duration-300"
           priority
           style={{ width: width, height: height }}
         />

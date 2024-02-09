@@ -24,7 +24,7 @@ const Designer: React.FC<DesignerProps> = ({
           width={width}
           height={height}
           alt={"breakout"}
-          className="hover:scale-125"
+          className="hover:scale-125 ease-in duration-500"
         />
       </div>
       <div className="text-center ">

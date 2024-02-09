@@ -17,7 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${rufina.variable} ${roboto.variable}`}
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }

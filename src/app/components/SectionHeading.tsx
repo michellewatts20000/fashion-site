@@ -10,7 +10,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   description,
 }) => {
   return (
-    <div className="mx-auto text-center pt-20 pb-20">
+    <div className="mx-auto text-center pt-20 pb-20 md:px-0 px-10">
       <h1 className="section-heading mb-2">{title}</h1>
       <p className="text-darkGreen">{description}</p>
     </div>

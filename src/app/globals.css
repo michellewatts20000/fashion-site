@@ -3,18 +3,12 @@
 @tailwind utilities;
 
 p {
-    font-size: 24px;;
+    @apply font-poppins text-22 font-medium text-mediumGreen leading-custom
 }
-
-p {
-    @apply font-poppins text-22 font-medium text-mediumGreen
-}
-
 
 .subheading {
-    @apply font-poppins text-24 font-medium text-mediumGreen
+    @apply font-poppins text-24 font-medium text-mediumGreen md:leading-loose leading-custom
 }
-
 
 .nav-items  {
     @apply font-poppins font-medium text-23 uppercase text-darkGreen
@@ -24,9 +18,6 @@ li {
     @apply hover:underline cursor-pointer
 }
 
-
-
-
 .section-heading {
-    @apply font-roboto font-medium text-clampHeading2  text-darkGreen
+    @apply font-roboto font-medium text-clampHeading2 text-darkGreen
 }
