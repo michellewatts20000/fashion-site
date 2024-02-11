@@ -17,6 +17,10 @@ import allProducts from "@/app/data/product.js";
 
 const { products, products2, products3 } = allProducts;
 
+const navMenu = () => {
+  console.log("nav open close function");
+};
+
 export default function Home() {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -35,7 +39,7 @@ export default function Home() {
             <div className={`${myFont.className} text-40 text-darkGreen`}>
               <a href="">Rivo</a>
             </div>
-            <div className="ml-40 md:block hidden">
+            <div className="ml-40 sd:block hidden">
               <ul className="flex gap-10 nav-items">
                 <li>Home</li>
                 <li>Shop</li>
@@ -43,7 +47,7 @@ export default function Home() {
                 <li>Contact</li>
               </ul>
             </div>
-            <div className="flex items-center justify-center gap-10">
+            <div className="sd:flex items-center justify-center gap-10 hidden">
               <a href="">
                 <Image
                   src={"/shopping-icon.png"}
@@ -58,6 +62,18 @@ export default function Home() {
               <button className="hover:bg-white  w-[142px] h-[52px] outline-darkGreen border-2 border-darkGreen text-20 uppercase font-poppins font-medium">
                 Login
               </button>
+            </div>
+            <div className="sd:hidden">
+              <Image
+                src={"/nav-icon.svg"}
+                width={32}
+                height={32}
+                alt={"shopping icon"}
+                className="mt-2"
+                priority
+                style={{ width: 32, height: 32 }}
+                onClick={navMenu}
+              />
             </div>
           </div>
         </nav>
