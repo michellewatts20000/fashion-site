@@ -2,7 +2,7 @@ name: nightly-netlify-build
 
 on:
   schedule:
-     - cron: "50 2 * * *" # 1:50 PM AEDT is 2:50 AM UTC the next day
+     - cron: "40 4 * * *" # 3:40 PM AEDT is 4:40 AM UTC the next day
 
 jobs:
   build:
